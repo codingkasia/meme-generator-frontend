@@ -79,7 +79,9 @@ class App extends React.Component {
 
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json"
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Credentials": true 
         },
         body: JSON.stringify({
           template_id: memeId,
