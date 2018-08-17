@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+// import React from "react";
+// import { Link } from "react-router-dom";
 
-const Navbar = () => (
-  <div>
-    <Link to="/comments">Comments</Link>;
+// const Navbar = () => (
+//   <div>
+//     <Link to="/comments">Comments</Link>;
  
-  </div>
-);
+//   </div>
+// );
 
-export default Navbar;
+// export default Navbar;
