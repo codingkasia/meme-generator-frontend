@@ -74,8 +74,8 @@ class App extends React.Component {
       "https://git.heroku.com/meme-generator-api.git/api/v1/memes",
       {
         method: "POST",
-        mode: "no-cors", // no-cors, cors, *same-origin
-        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        // mode: "no-cors", // no-cors, cors, *same-origin
+        // cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
 
         headers: {
           "Content-Type": "application/json",
