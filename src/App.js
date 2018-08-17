@@ -75,6 +75,7 @@ class App extends React.Component {
       {
         method: "POST",
         mode: "no-cors", // no-cors, cors, *same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
 
         headers: {
           "Content-Type": "application/json",
@@ -110,8 +111,8 @@ class App extends React.Component {
           allMemes={this.allMemes}
           removeMyMeme={this.removeMyMeme}
         />
-        {/* <h3>Search</h3>
-        <Search updateTermSearch={this.updateTermSearch} /> */}
+        <h3>Search</h3>
+        <Search updateTermSearch={this.updateTermSearch} />
         <h4>
           <i>Insert Some Text Below</i>
         </h4>
