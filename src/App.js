@@ -63,26 +63,31 @@ class App extends React.Component {
       );
   };
   fetchFromBackend = () => {
-    return fetch("http://localhost:3000/api/v1/memes")
+    // return fetch("http://localhost:3000/api/v1/memes")
+    return fetch("https://git.heroku.com/meme-generator-api.git/api/v1/memes")
       .then(resp => resp.json())
       .then(result => console.log(result));
   };
   fetchClickedMeme = memeId => {
-    return fetch("http://localhost:3000/api/v1/memes", {
-      method: "POST",
+    // return fetch("http://localhost:3000/api/v1/memes", {
+    return fetch(
+      "https://git.heroku.com/meme-generator-api.git/api/v1/memes",
+      {
+        method: "POST",
 
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: JSON.stringify({
-        template_id: memeId,
-        username: "kasiarosenb",
-        password: "kasiarosenb",
-        text0: this.state.text0,
-        text1: this.state.text1
-      })
-    })
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          template_id: memeId,
+          username: "kasiarosenb",
+          password: "kasiarosenb",
+          text0: this.state.text0,
+          text1: this.state.text1
+        })
+      }
+    )
       .then(response => response.json())
       .then(result =>
         this.setState({ myMemes: [...this.state.myMemes, result] })
