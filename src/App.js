@@ -74,6 +74,7 @@ class App extends React.Component {
       "https://git.heroku.com/meme-generator-api.git/api/v1/memes",
       {
         method: "POST",
+        mode: "no-cors", // no-cors, cors, *same-origin
 
         headers: {
           "Content-Type": "application/json",
@@ -109,8 +110,8 @@ class App extends React.Component {
           allMemes={this.allMemes}
           removeMyMeme={this.removeMyMeme}
         />
-        <h3>Search</h3>
-        <Search updateTermSearch={this.updateTermSearch} />
+        {/* <h3>Search</h3>
+        <Search updateTermSearch={this.updateTermSearch} /> */}
         <h4>
           <i>Insert Some Text Below</i>
         </h4>
