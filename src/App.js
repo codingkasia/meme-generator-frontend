@@ -74,14 +74,16 @@ class App extends React.Component {
       "https://git.heroku.com/meme-generator-api.git/api/v1/memes",
       {
         method: "POST",
-        // mode: "no-cors", // no-cors, cors, *same-origin
-        // cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        mode: "no-cors", // no-cors, cors, *same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
 
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Credentials": true 
+          "Access-Control-Allow-Origin":
+            "https://polar-garden-85035.herokuapp.com/",
+          "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Methods": "GET, POST, DELETE"
         },
         body: JSON.stringify({
           template_id: memeId,
